@@ -15,12 +15,21 @@ public class IngressoFamiliar extends Ingresso {
     private Evento evento;
     int codigo;
     
+    /**
+     * Construtor da classe IngressoFamiliar
+     * @param evento o evento associado ao Ingresso
+     * @param codigo o codigo associado ao Ingresso
+     */
     public IngressoFamiliar(Evento evento, int codigo){
         super(evento, codigo);
     }
 
+    /**
+     * Retorna o preço do Ingresso
+     * @return o preço do Ingresso
+     */
     @Override
     public double getPreco () {
-        return this.evento.getPrecoIngresso() * 0.75;
+        return this.evento.getPrecoIngresso() * 0.75;  // 25% de desconto
     }
 }
