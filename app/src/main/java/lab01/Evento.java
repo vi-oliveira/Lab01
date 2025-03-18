@@ -11,21 +11,24 @@ package lab01;
  * 
  * @author Gabriel Leite - 216180
  * @author Caio Rhoden - 214129
+ * @author Vinícius de Oliveira - 251527
  */
 public abstract class Evento {
     private String nome;
     private Local local;
     private double precoIngresso;
+    private String data;
 
     /**
      * Construtor da classe Evento
      * @param nome o nome do Evento
      * @param local o local associado ao Evento
      */
-    public Evento(String nome, Local local, double precoIngresso){
+    public Evento(String nome, Local local, double precoIngresso, String data){
         this.nome = nome;
         this.local = local;
         this.precoIngresso = precoIngresso;
+        this.data = data;
     }
 
     /**
@@ -43,13 +46,37 @@ public abstract class Evento {
     public void setNome(String nome){
         this.nome = nome;
     }
+    
+    /**
+     * Retorna a data do Evento
+     * @return a data do Evento
+     */
+    public String getData(){
+        return data;
+    }
 
+    /**
+     * Altera a data do Evento para `nome` 
+     * @param data a nova data do Evento
+     */
+    public void setData(String data){
+        this.data = data;
+    }
+    
     /**
      * Retorna o preço do ingresso do Evento
      * @return o precoIngresso do Evento
      */
     public double getPrecoIngresso(){
         return precoIngresso;
+    }
+
+    /**
+     * Retorna o nome do local do Evento
+     * @return o nome do local do Evento
+     */
+    public String getNomeLocal(){
+        return local.getNome();
     }
 
     /**
