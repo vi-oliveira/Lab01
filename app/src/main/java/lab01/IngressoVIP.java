@@ -1,13 +1,31 @@
+/*
+ * IngressoVIP.java
+ * 
+ * Material usado na disciplina MC322 - Programação orientada a objetos.
+ */
+
 package lab01;
 
+/**
+ * Contém a estrutura de implementação de um IngressoVIP.
+ * 
+ * @author Vinícius de Oliveira - 251527
+ */
 public class IngressoVIP extends Ingresso {
     private Evento evento;
-    int codigo;
     
-    public IngressoVIP(Evento evento, int codigo){
-        super(evento, codigo);
+    /**
+     * Construtor da classe IngressoInteira
+     * @param evento o evento associado ao Ingresso
+     */
+    public IngressoVIP(Evento evento){
+        super(evento);
     }
 
+    /**
+     * Retorna o preço do IngressoVIP
+     * @return o preço do IngressoVIP
+     */
     @Override
     public double getPreco () {
         return this.evento.getPrecoIngresso() * 1.5;

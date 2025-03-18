@@ -13,20 +13,18 @@ package lab01;
 */
 public class IngressoInteira extends Ingresso{
     private Evento evento;
-    private int codigo;
 
     /**
      * Construtor da classe IngressoInteira
      * @param evento o evento associado ao Ingresso
-     * @param codigo o codigo associado ao Ingresso
      */
-    public IngressoInteira(Evento evento, int codigo){
-        super(evento, codigo);
+    public IngressoInteira(Evento evento){
+        super(evento);
     }
 
     /**
-     * Retorna o preço do Ingresso
-     * @return o preço do Ingresso
+     * Retorna o preço do IngressoInteira
+     * @return o preço do IngressoInteira
      */
     @Override
     public double getPreco () {

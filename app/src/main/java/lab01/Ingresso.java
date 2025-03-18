@@ -6,6 +6,8 @@
 
 package lab01;
 
+import java.util.Random;
+
 /**
  * Contém a estrutura de implementação de um Ingresso.
  * 
@@ -22,9 +24,20 @@ public abstract class Ingresso {
      * @param evento o evento associado ao Ingresso
      * @param codigo o codigo associado ao Ingresso
      */
-    public Ingresso(Evento evento, int codigo){
+    public Ingresso(Evento evento){
         this.evento = evento;
-        this.codigo = codigo;
+        this.codigo = geraCodigo();
+    }
+
+    /**
+     * Retorna um código aleatório para o ingresso
+     * @return o código aleatório para o ingresso
+     */
+    private int geraCodigo(){
+        int max = 9999;
+        int min = 1000;
+        Random rand = new Random();
+        return rand.nextInt(max - min) + min;
     }
 
     /**

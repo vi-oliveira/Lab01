@@ -7,14 +7,14 @@
 package lab01;
 
 /**
- * Contém a estrutura de implementação de um Evento.
+ * Contém a estrutura de implementação de um EventoShow.
  * 
  * @author Vinícius de Oliveira - 251527
  */
 public class EventoShow extends Evento {
     private String nome;
     private Local local;
-    private int duracao;
+    private int precoIngresso;
     private String artista;
     private String data;
     
@@ -22,15 +22,13 @@ public class EventoShow extends Evento {
      * Construtor da classe EventoShow
      * @param nome o nome do Evento
      * @param local o local associado ao Evento
-     * @param duracao a duração do Evento
+     * @param precoIngresso o preço do ingresso do Evento
      * @param artista o nome do artista
      * @param data a data do Evento
      */
-    public EventoShow(String nome, Local local, int duracao,String artista, String data){
-        super(nome, local, 100.00);
-        this.artista = artista;
-        this.duracao = duracao;
-        this.data = data;
+    public EventoShow(String nome, Local local, int precoIngresso, String artista, String data){
+        super(nome, local, precoIngresso, data);
+        this.artista = artista; 
     }
 
     /**
@@ -61,10 +59,10 @@ public class EventoShow extends Evento {
      * Imprime os dados relacionados ao evento
      */
     public void exibirDetalhes () {
-        System.out.println("Nome do show:" + this.nome);
-        System.out.println("Local:" + this.local);
-        System.out.println("Artista:" + this.artista);
-        System.out.println("Duração do show:" + this.duracao + " minutos");
-        System.out.println("Data do show:" + this.data);
+        System.out.println("Nome do show: " + this.getNome());
+        System.out.println("Local: " + this.getNomeLocal());
+        System.out.println("Artista: " + this.artista);
+        System.out.println("Preço do ingresso:  R$" + this.getPrecoIngresso());
+        System.out.println("Data do show: " + this.getData());
     }
 }

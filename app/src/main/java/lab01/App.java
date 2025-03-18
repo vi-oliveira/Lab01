@@ -35,7 +35,8 @@ public class App {
 
 
         // DEMONSTRAÇÃO PASSO 2
-
+        EventoShow evento = new EventoShow("Esquinas", local, 80, "Anavitoria", "22/09/2025");
+        evento.exibirDetalhes();
 
 
         // DEMONSTRAÇÃO PASSO 3

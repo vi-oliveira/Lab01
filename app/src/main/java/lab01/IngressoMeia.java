@@ -6,8 +6,6 @@
 
 package lab01;
 
-import java.util.Random;
-
 /**
  * Contém a estrutura de implementação de um IngressoMeia.
  * 
@@ -15,30 +13,18 @@ import java.util.Random;
  */
 public class IngressoMeia extends Ingresso {
     private Evento evento;
-    int codigo;
     
     /**
      * Construtor da classe IngressoMeia
      * @param evento o evento associado ao Ingresso
      */
     public IngressoMeia(Evento evento) {
-        // super(evento, geraCodigo());
+        super(evento);
     }
 
     /**
-     * Retorna um código aleatório para o ingresso
-     * @return o código aleatório para o ingresso
-     */
-    private int geraCodigo(){
-        int max = 9999;
-        int min = 1000;
-        Random rand = new Random();
-        return rand.nextInt(max - min) + min;
-    }
-
-    /**
-     * Retorna o preço do Ingresso
-     * @return o preço do Ingresso
+     * Retorna o preço do IngressoMeia
+     * @return o preço do IngressoMeia
      */
     @Override
     public double getPreco () {

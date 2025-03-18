@@ -1,21 +1,20 @@
 /*
- * EventoTeatro.java
+ * EventoPalestra.java
  * 
  * Material usado na disciplina MC322 - Programação orientada a objetos.
  */
 
 package lab01;
 
-import java.util.List;
-
 /**
- * Contém a estrutura de implementação de um EventoTeatro.
+ * Contém a estrutura de implementação de um EventoPalestra.
  * 
  * @author Vinícius de Oliveira - 251527
  */
-public class EventoTeatro extends Evento {
+public class EventoPalestra extends Evento{
     private String nome;
-    private List<String> atores;
+    private String nomePalestrante;
+    private String tema;
     private int duracao;
     private Double precoIngresso;
     private Local local;
@@ -24,30 +23,31 @@ public class EventoTeatro extends Evento {
     /**
      * Construtor da classe EventoTeatro
      * @param nome o nome da peça
-     * @param atores List com o nome dos atores
-     * @param duracao a duração do teatro
+     * @param nomePalestrante o nome do palestrante
+     * @param tema o tema da palestra
+     * @param duracao a duração da palestra
      * @param precoIngresso o preço do ingresso do Evento
      * @param local o local associado ao Evento
      * @param data a data do Evento
      */
-    public EventoTeatro(String nome, List<String> atores,
-    int duracao, Double precoIngresso, Local local, String data) {
+    public EventoPalestra(String nome, String nomePalestrante,
+    String tema, int duracao, Double precoIngresso, Local local, String data) {
         super(nome, local, precoIngresso, data);
-        this.atores = atores;
+        this.nomePalestrante = nomePalestrante;
+        this.tema = tema;
         this.duracao = duracao;
     }
 
     /**
-     * Imprime os dados relacionados ao evento
+     * Imprime os dados relacionados à palestra
      */
     public void exibirDetalhes () {
-        System.out.println("Nome do evento: " + this.getNome());
+        System.out.println("Nome: " + this.getNome());
+        System.out.println("Nome do palestrante: " + this.nomePalestrante);
+        System.out.println("Tema da palestra: " + this.tema);
         System.out.println("Duração: " + this.duracao + " minutos");
         System.out.println("Preço do ingresso: R$" + this.getPrecoIngresso());
         System.out.println("Local: " + this.getNomeLocal());
         System.out.println("Data: " + this.getData());
-        for (int i = 0; i < atores.size(); i++){
-            System.out.println("Ator(a) " + i + ": " + this.atores.get(i));
-        }
     }
 }
