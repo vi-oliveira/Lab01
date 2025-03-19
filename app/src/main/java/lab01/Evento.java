@@ -6,6 +6,9 @@
 
 package lab01;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Contém a estrutura de implementação de um Evento.
  * 
@@ -18,17 +21,21 @@ public abstract class Evento {
     private Local local;
     private double precoIngresso;
     private String data;
+    private List<Ingresso> ingressosVendidos;
 
     /**
      * Construtor da classe Evento
      * @param nome o nome do Evento
      * @param local o local associado ao Evento
+     * @param precoIngresso o preço do ingresso do Evento
+     * @param data a data do Evento
      */
     public Evento(String nome, Local local, double precoIngresso, String data){
         this.nome = nome;
         this.local = local;
         this.precoIngresso = precoIngresso;
         this.data = data;
+        this.ingressosVendidos = new ArrayList<Ingresso>();
     }
 
     /**
@@ -45,6 +52,22 @@ public abstract class Evento {
      */
     public void setNome(String nome){
         this.nome = nome;
+    }
+    
+    /**
+     * Retorna a lista de ingressos vendidos
+     * @return a lista de ingressos vendidos
+     */
+    public List<Ingresso> getIngressosVendidos(){
+        return ingressosVendidos;
+    }
+
+    /**
+     * Altera a lista de ingressos vendidos para 'ingressosVendidos'
+     * @param ingressosVendidos lista de ingressos vendidos
+     */
+    public void setIngressosVendidos(List<Ingresso> ingressosVendidos){
+        this.ingressosVendidos = ingressosVendidos;
     }
     
     /**
@@ -85,5 +108,27 @@ public abstract class Evento {
      */
     public void setPrecoIngresso(double precoIngresso){
         this.precoIngresso = precoIngresso;
+    }
+
+    /**
+     * Adiciona um novo ingresso à lista de ingressos vendidos
+     * @param ingresso o ingresso que foi vendido
+     * @param usuario o usuario que comprou o ingresso
+     */
+    public void adicionarIngresso(Ingresso ingresso, Usuario usuario){
+        this.ingressosVendidos.add(ingresso);
+        usuario.setIngresso(ingresso);
+    }
+    
+    /**
+     * Calcula o faturamento total dos ingressos vendidos
+     * @return o valor total faturado para o evento
+     */
+    public Double calculaFaturamento(){
+        Double faturamento = 0.0;
+        for (int i = 0; i < ingressosVendidos.size(); i++){
+            faturamento += ingressosVendidos.get(i).getPreco();
+        }
+        return faturamento;
     }
 }

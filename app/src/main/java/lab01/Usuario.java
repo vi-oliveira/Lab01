@@ -12,9 +12,9 @@ package lab01;
  * @author Caio Rhoden - 214129
  */
 public class Usuario {
-
     private String nome;
     private String email;
+    private Ingresso ingresso;
 
     /**
      * Construtor da classe Usuario
@@ -32,6 +32,22 @@ public class Usuario {
      */
     public String getNome(){
         return nome;
+    }
+    
+    /**
+     * Altera o ingresso do usuário para `ingresso` 
+     * @param ingresso o novo ingresso
+     */
+    public void setIngresso(Ingresso ingresso){
+        this.ingresso = ingresso;
+    }
+    
+    /**
+     * Retorna o ingresso do usuário
+     * @return o ingresso do usupario
+     */
+    public Ingresso getIngresso(){
+        return ingresso;
     }
 
     /**

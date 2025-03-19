@@ -6,7 +6,7 @@
 
 package lab01;
 
-import java.util.Random;
+import java.util.UUID;
 
 /**
  * Contém a estrutura de implementação de um Ingresso.
@@ -17,28 +17,20 @@ import java.util.Random;
  */
 public abstract class Ingresso {
     private Evento evento;
-    private int codigo;
+    private UUID codigo;
 
     /**
      * Construtor da classe Ingresso
      * @param evento o evento associado ao Ingresso
-     * @param codigo o codigo associado ao Ingresso
      */
     public Ingresso(Evento evento){
         this.evento = evento;
-        this.codigo = geraCodigo();
+        this.codigo = UUID.randomUUID();
     }
 
-    /**
-     * Retorna um código aleatório para o ingresso
-     * @return o código aleatório para o ingresso
-     */
-    private int geraCodigo(){
-        int max = 9999;
-        int min = 1000;
-        Random rand = new Random();
-        return rand.nextInt(max - min) + min;
-    }
+    // public void testUUID(){
+        // System.out.println(this.codigo);
+    // }
 
     /**
      * Retorna o preço do Ingresso

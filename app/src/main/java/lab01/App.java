@@ -31,7 +31,8 @@ public class App {
         System.out.println("Nome do usuário: " + usuario.getNome());
 
         // DEMONSTRAÇÃO PASSO 1
-
+        // EventoShow evento = new EventoShow("Esquinas", local, 80, "Anavitoria", "22/09/2025");
+        // IngressoMeia ingressoMeia = new IngressoMeia(evento);
 
 
         // DEMONSTRAÇÃO PASSO 2

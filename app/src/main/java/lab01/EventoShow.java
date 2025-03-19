@@ -41,7 +41,7 @@ public class EventoShow extends Evento {
 
     /**
      * Altera o nome do artista para `nome` 
-     * @param nome o novo nome do artista
+     * @param nomeArtista o novo nome do artista
      */
     public void setArtista(String nomeArtista){
         this.artista = nomeArtista;
@@ -62,7 +62,7 @@ public class EventoShow extends Evento {
         System.out.println("Nome do show: " + this.getNome());
         System.out.println("Local: " + this.getNomeLocal());
         System.out.println("Artista: " + this.artista);
-        System.out.println("Preço do ingresso:  R$" + this.getPrecoIngresso());
+        System.out.println("Preço do ingresso:  R$" + String.format("%.2f", this.getPrecoIngresso()));
         System.out.println("Data do show: " + this.getData());
     }
 }

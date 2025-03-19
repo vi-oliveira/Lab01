@@ -18,6 +18,7 @@ public class Local {
     /**
      * Construtor da classe Local
      * @param nome o nome do local
+     * @param capacidade o nome do local
      */
     public Local(String nome, double capacidade){
         this.nome = nome;
