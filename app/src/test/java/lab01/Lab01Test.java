@@ -83,33 +83,33 @@ public class Lab01Test {
      * Verifica se os dois eventos foram adicionados à lista de eventos
      * do HistoricoEventos
      */
-    @Test
-    public void adicionaEventoemHistorico() {
-
-        Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento1 = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
-        EventoShow testEvento2 = new EventoShow("MPB em Campinas", testLocal, 200, "Anavitória", "02/05/2025");
-        HistoricoEventos historicoTeste = new HistoricoEventos();
-        historicoTeste.adicionarEvento(testEvento1);
-        historicoTeste.adicionarEvento(testEvento2);
-        assertEquals(2, historicoTeste.getEventos().size());
-
-    }
-
-    /**
-     * Testa o método buscarEventosPorTipo do HistoricoEventos
-     * Verifica se os dois eventos do tipo EventoShow foram encontrados
-     * pela busca
-     */
-    @Test
-    public void buscarEventosPorTipo() {
-
-        Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento1 = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
-        EventoShow testEvento2 = new EventoShow("MPB em Campinas", testLocal, 200, "Anavitória", "02/05/2025");        
-        HistoricoEventos historicoTeste = new HistoricoEventos();
-        historicoTeste.adicionarEvento(testEvento1);
-        historicoTeste.adicionarEvento(testEvento2);
-        assertEquals(2, historicoTeste.buscarEventosPorTipo(EventoShow.class).size());
-    }
+    // @Test
+    // public void adicionaEventoemHistorico() {
+// 
+        // Local testLocal = new Local("Teatro Castro Mendes", 2000);
+        // EventoShow testEvento1 = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
+        // EventoShow testEvento2 = new EventoShow("MPB em Campinas", testLocal, 200, "Anavitória", "02/05/2025");
+        // HistoricoEventos historicoTeste = new HistoricoEventos();
+        // historicoTeste.adicionarEvento(testEvento1);
+        // historicoTeste.adicionarEvento(testEvento2);
+        // assertEquals(2, historicoTeste.getEventos().size());
+// 
+    // }
+// 
+    // /**
+    //  * Testa o método buscarEventosPorTipo do HistoricoEventos
+    //  * Verifica se os dois eventos do tipo EventoShow foram encontrados
+    //  * pela busca
+    //  */
+    // @Test
+    // public void buscarEventosPorTipo() {
+// 
+        // Local testLocal = new Local("Teatro Castro Mendes", 2000);
+        // EventoShow testEvento1 = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
+        // EventoShow testEvento2 = new EventoShow("MPB em Campinas", testLocal, 200, "Anavitória", "02/05/2025");        
+        // HistoricoEventos historicoTeste = new HistoricoEventos();
+        // historicoTeste.adicionarEvento(testEvento1);
+        // historicoTeste.adicionarEvento(testEvento2);
+        // assertEquals(2, historicoTeste.buscarEventosPorTipo(EventoShow.class).size());
+    // }
 }

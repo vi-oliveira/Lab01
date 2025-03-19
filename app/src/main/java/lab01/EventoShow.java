@@ -52,7 +52,7 @@ public class EventoShow extends Evento {
      * @return a capacidade do local do evento
      */
     public Double getCapacidade(){
-        return local.getCapacidade();
+        return this.getCapacidadeLocal();
     }
 
     /**

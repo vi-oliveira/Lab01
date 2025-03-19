@@ -101,6 +101,14 @@ public abstract class Evento {
     public String getNomeLocal(){
         return local.getNome();
     }
+    
+    /**
+     * Retorna a capacidade do local do Evento
+     * @return a capacidade do local do Evento
+     */
+    public Double getCapacidadeLocal(){
+        return local.getCapacidade();
+    }
 
     /**
      * Altera o precoIngresso do Evento para `precoIngresso` 
