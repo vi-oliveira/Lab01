@@ -95,14 +95,6 @@ public abstract class Evento {
     }
 
     /**
-     * Retorna o nome do local do Evento
-     * @return o nome do local do Evento
-     */
-    public String getNomeLocal(){
-        return local.getNome();
-    }
-
-    /**
      * Altera o precoIngresso do Evento para `precoIngresso` 
      * @param precoIngresso o novo precoIngresso do Evento
      */

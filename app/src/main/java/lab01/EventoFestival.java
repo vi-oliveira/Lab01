@@ -38,7 +38,8 @@ public class EventoFestival extends Evento {
     public void exibirDetalhes () {
         System.out.println("Nome do festival: " + this.getNome());
         System.out.println("Tema do festival: " + this.tema);
-        System.out.println("Preço do ingresso:  R$" + String.format("%.2f", this.getPrecoIngresso()));
+        System.out.println("Preço do ingresso:  R$"
+        + String.format("%.2f", this.getPrecoIngresso()));
         System.out.println("Local: " + super.local.getNome());
         System.out.println("Data: " + this.getData());
     }

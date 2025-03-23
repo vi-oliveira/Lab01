@@ -62,18 +62,17 @@ public class EventoShow extends Evento implements FiltroEventos {
         System.out.println("Nome do show: " + this.getNome());
         System.out.println("Local: " + super.local.getNome());
         System.out.println("Artista: " + this.artista);
-        System.out.println("Preço do ingresso:  R$" + String.format("%.2f", this.getPrecoIngresso()));
+        System.out.println("Preço do ingresso:  R$"
+        + String.format("%.2f", this.getPrecoIngresso()));
         System.out.println("Data do show: " + this.getData());
     }
 
     @Override
-    public boolean filtrar(Evento evento) { // Tentar usar como critério o nome do artista
+    public boolean filtrar(Evento evento) {
         if (evento instanceof EventoShow) {
             EventoShow outroShow = (EventoShow) evento;
-            //if (outroShow.artista == )
+            return (outroShow.getCapacidade() >= 200);
             // Compara generoMusical , duracao , etc . com outroShow
-            // Retorna true se atender aos criterios , false caso contrario
-            return true; // meu
         } else {
             return false ;
         }
