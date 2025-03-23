@@ -28,6 +28,6 @@ public class IngressoInteira extends Ingresso{
      */
     @Override
     public double getPreco () {
-        return this.evento.getPrecoIngresso();
+        return super.evento.getPrecoIngresso();
     }
 }

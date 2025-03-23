@@ -18,7 +18,7 @@ import java.util.List;
  */
 public abstract class Evento {
     private String nome;
-    private Local local;
+    protected Local local;
     private double precoIngresso;
     private String data;
     private List<Ingresso> ingressosVendidos;
@@ -101,14 +101,6 @@ public abstract class Evento {
     public String getNomeLocal(){
         return local.getNome();
     }
-    
-    /**
-     * Retorna a capacidade do local do Evento
-     * @return a capacidade do local do Evento
-     */
-    public Double getCapacidadeLocal(){
-        return local.getCapacidade();
-    }
 
     /**
      * Altera o precoIngresso do Evento para `precoIngresso` 
@@ -139,4 +131,9 @@ public abstract class Evento {
         }
         return faturamento;
     }
+
+    /**
+     * Imprime os dados relacionados ao evento
+     */
+    public abstract void exibirDetalhes();
 }

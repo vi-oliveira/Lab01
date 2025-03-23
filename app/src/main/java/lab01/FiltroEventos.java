@@ -1,5 +1,5 @@
 package lab01;
 
 public interface FiltroEventos {
-    //IMPLEMENTAR
+    public boolean filtrar(Evento evento);
 }

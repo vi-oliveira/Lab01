@@ -28,6 +28,6 @@ public class IngressoMeia extends Ingresso {
      */
     @Override
     public double getPreco () {
-        return this.evento.getPrecoIngresso()/2;  // 50% de desconto
+        return super.evento.getPrecoIngresso()/2;  // 50% de desconto
     }
 }

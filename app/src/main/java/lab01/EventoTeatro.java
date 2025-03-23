@@ -40,11 +40,11 @@ public class EventoTeatro extends Evento {
     /**
      * Imprime os dados relacionados ao evento
      */
-    public void exibirDetalhes () {
+    public void exibirDetalhes() {
         System.out.println("Nome do evento: " + this.getNome());
         System.out.println("Duração: " + this.duracao + " minutos");
         System.out.println("Preço do ingresso: R$" + String.format("%.2f", this.getPrecoIngresso()));
-        System.out.println("Local: " + this.getNomeLocal());
+        System.out.println("Local: " + super.local.getNome());
         System.out.println("Data: " + this.getData());
         for (int i = 0; i < atores.size(); i++){
             System.out.println("Ator(a) " + i + ": " + this.atores.get(i));

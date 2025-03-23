@@ -37,17 +37,33 @@ public class App {
 
         // DEMONSTRAÇÃO PASSO 2
         EventoShow evento = new EventoShow("Esquinas", local, 80, "Anavitoria", "22/09/2025");
-        evento.exibirDetalhes();
+        // evento.exibirDetalhes();
 
 
         // DEMONSTRAÇÃO PASSO 3
-
-
-
+        
+        
         // DEMONSTRAÇÃO PASSO 4
-
-
-
+        
+        
+        
         // DEMONSTRAÇÃO PASSO 5
+
+
+
+        //  TEESTE
+        // Local testLocal = new Local("Teatro Castro Mendes", 2000);
+        // EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 250, "Djavan", "01/05/2025");
+        // IngressoInteira ingressoInteira = new IngressoInteira(testEvento);
+        // System.out.println("teste preço: " + ingressoInteira.getPreco());
+
+
+        Local testLocal = new Local("Teatro Castro Mendes", 2000);
+        EventoShow testEvento1 = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
+        EventoShow testEvento2 = new EventoShow("MPB em Campinas", testLocal, 200, "Anavitória", "02/05/2025");
+        HistoricoEventos historicoTeste = new HistoricoEventos();
+        historicoTeste.adicionarEvento(testEvento1);
+        historicoTeste.adicionarEvento(testEvento2);
+        System.out.println("2: " + historicoTeste.getEventos().size());
     }
 }

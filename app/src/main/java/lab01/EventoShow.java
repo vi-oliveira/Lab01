@@ -11,7 +11,7 @@ package lab01;
  * 
  * @author Vinícius de Oliveira - 251527
  */
-public class EventoShow extends Evento {
+public class EventoShow extends Evento implements FiltroEventos {
     private String nome;
     private Local local;
     private int precoIngresso;
@@ -52,7 +52,7 @@ public class EventoShow extends Evento {
      * @return a capacidade do local do evento
      */
     public Double getCapacidade(){
-        return this.getCapacidadeLocal();
+        return super.local.getCapacidade();
     }
 
     /**
@@ -60,9 +60,22 @@ public class EventoShow extends Evento {
      */
     public void exibirDetalhes () {
         System.out.println("Nome do show: " + this.getNome());
-        System.out.println("Local: " + this.getNomeLocal());
+        System.out.println("Local: " + super.local.getNome());
         System.out.println("Artista: " + this.artista);
         System.out.println("Preço do ingresso:  R$" + String.format("%.2f", this.getPrecoIngresso()));
         System.out.println("Data do show: " + this.getData());
+    }
+
+    @Override
+    public boolean filtrar(Evento evento) { // Tentar usar como critério o nome do artista
+        if (evento instanceof EventoShow) {
+            EventoShow outroShow = (EventoShow) evento;
+            //if (outroShow.artista == )
+            // Compara generoMusical , duracao , etc . com outroShow
+            // Retorna true se atender aos criterios , false caso contrario
+            return true; // meu
+        } else {
+            return false ;
+        }
     }
 }

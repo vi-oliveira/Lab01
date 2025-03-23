@@ -28,6 +28,6 @@ public class IngressoVIP extends Ingresso {
      */
     @Override
     public double getPreco () {
-        return this.evento.getPrecoIngresso() * 1.5;
+        return super.evento.getPrecoIngresso() * 1.5;
     }
 }
