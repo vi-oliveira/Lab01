@@ -14,7 +14,7 @@ package lab01;
 public class EventoShow extends Evento implements FiltroEventos {
     private String nome;
     private Local local;
-    private int precoIngresso;
+    private Double precoIngresso;
     private String artista;
     private String data;
     
@@ -26,7 +26,7 @@ public class EventoShow extends Evento implements FiltroEventos {
      * @param artista o nome do artista
      * @param data a data do Evento
      */
-    public EventoShow(String nome, Local local, int precoIngresso, String artista, String data){
+    public EventoShow(String nome, Local local, double precoIngresso, String artista, String data){
         super(nome, local, precoIngresso, data);
         this.artista = artista; 
     }
@@ -72,7 +72,6 @@ public class EventoShow extends Evento implements FiltroEventos {
         if (evento instanceof EventoShow) {
             EventoShow outroShow = (EventoShow) evento;
             return (outroShow.getCapacidade() >= 200);
-            // Compara generoMusical , duracao , etc . com outroShow
         } else {
             return false ;
         }

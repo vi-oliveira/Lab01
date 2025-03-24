@@ -8,6 +8,7 @@ package lab01;
 
 /**
  * Contém a estrutura de implementação de um IngressoFamiliar.
+ * Tipo de ingresso para familiares dos envolvidos no evento. 
  * 
  * @author Vinícius de Oliveira - 251527
  */
@@ -23,11 +24,11 @@ public class IngressoFamiliar extends Ingresso {
     }
 
     /**
-     * Retorna o preço do IngressoFamiliar
+     * Retorna o preço do IngressoFamiliar (25% de desconto)
      * @return o preço do IngressoFamiliar
      */
     @Override
-    public double getPreco () {
-        return super.evento.getPrecoIngresso() * 0.75;  // 25% de desconto
+    public double getPreco() {
+        return super.evento.getPrecoIngresso() * 0.75;
     }
 }

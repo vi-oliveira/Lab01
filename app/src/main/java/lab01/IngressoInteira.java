@@ -11,7 +11,7 @@ package lab01;
 * 
 * @author Vinícius de Oliveira - 251527
 */
-public class IngressoInteira extends Ingresso{
+public class IngressoInteira extends Ingresso {
     private Evento evento;
 
     /**
@@ -27,7 +27,7 @@ public class IngressoInteira extends Ingresso{
      * @return o preço do IngressoInteira
      */
     @Override
-    public double getPreco () {
+    public double getPreco() {
         return super.evento.getPrecoIngresso();
     }
 }

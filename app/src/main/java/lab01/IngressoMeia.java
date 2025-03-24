@@ -23,11 +23,11 @@ public class IngressoMeia extends Ingresso {
     }
 
     /**
-     * Retorna o preço do IngressoMeia
+     * Retorna o preço do IngressoMeia (50% de desconto)
      * @return o preço do IngressoMeia
      */
     @Override
-    public double getPreco () {
-        return super.evento.getPrecoIngresso()/2;  // 50% de desconto
+    public double getPreco() {
+        return super.evento.getPrecoIngresso() / 2;
     }
 }

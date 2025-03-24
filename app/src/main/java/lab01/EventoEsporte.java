@@ -15,6 +15,9 @@ public class EventoEsporte extends Evento {
     private String nome;
     private String esporte;
     private int duracao;
+    private boolean partidaEmAndamento;
+    private int pontosTime1;
+    private int pontosTime2;
     private Double precoIngresso;
     private Local local;
     private String data;
@@ -33,12 +36,15 @@ public class EventoEsporte extends Evento {
         super(nome, local, precoIngresso, data);
         this.esporte = esporte;
         this.duracao = duracao;
+        this.partidaEmAndamento = false;
+        this.pontosTime1 = 0;
+        this.pontosTime2 = 0;
     }
 
     /**
      * Imprime os dados relacionados ao evento
      */
-    public void exibirDetalhes () {
+    public void exibirDetalhes(){
         System.out.println("Nome do evento: " + this.getNome());
         System.out.println("Esporte: " + this.esporte);
         System.out.println("Duração da partida: " + this.duracao + " minutos");
@@ -46,5 +52,62 @@ public class EventoEsporte extends Evento {
         + String.format("%.2f", this.getPrecoIngresso()));
         System.out.println("Local: " + super.local.getNome());
         System.out.println("Data: " + this.getData());
+    }
+
+    /**
+     * Inicia a partida do evento
+     */
+    public void comecaPartida(){
+        this.partidaEmAndamento = true;
+        System.out.println("Começando a partida");
+    }
+
+    /**
+     * Marca um ponto para um dos dois times.
+     * A função só adiciona o ponto se a partida estiver em andamento
+     * @param time o número do time que marcou um ponto
+     */
+    public void marcarPonto(int time){
+        if (partidaEmAndamento){
+            switch (time) {
+                case 1:
+                    this.pontosTime1 += 1;
+                    break;
+                
+                case 2:
+                    this.pontosTime2 += 1;
+                    break;
+    
+                default:
+                    System.out.println("Time inválido!");
+                    break;
+            }
+        } else {
+            System.out.println("A partida ainda não começou");
+        }
+    }
+
+    /**
+     * Imprime o placar da partida
+     */
+    public void exibirPlacar(){
+        System.out.println("PLACAR:");
+        System.out.println("Time 1: " + pontosTime1 + ", "
+        + "Time 2: " + pontosTime2);
+    }
+
+    /**
+     * Encerra a partida e imprime o time vencedor
+     */
+    public void terminaPartida(){
+        this.partidaEmAndamento = false;
+        System.out.println("FIM DA PARTIDA");
+        if (this.pontosTime1 > this.pontosTime2){
+            System.out.println("Vitória do time 1");
+        } else if (this.pontosTime1 < this.pontosTime2){
+            System.out.println("Vitória do time 2");
+        } else {
+            System.out.println("Empate");
+        }
     }
 }

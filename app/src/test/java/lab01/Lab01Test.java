@@ -1,3 +1,9 @@
+/*
+ * Modificado:
+ * Preço dos ingressos para shows foi alterado de int para Double,
+ * pois utilizar Double permite o uso de centavos.
+ */
+
 package lab01;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,7 +19,7 @@ public class Lab01Test {
     public void getCapacidadeEventoShow() {
 
         Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 150, "Djavan", "01/05/2025");
+        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 150.0, "Djavan", "01/05/2025");
         assertEquals(2000, testEvento.getCapacidade());
     }
 
@@ -27,7 +33,7 @@ public class Lab01Test {
     public void setAndGetArtistaEventoShow() {
 
         Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 150, "Djavan", "01/05/2025");
+        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 150.0, "Djavan", "01/05/2025");
         testEvento.setArtista("Anavitória");
         assertEquals("Anavitória", testEvento.getArtista());
     }
@@ -41,7 +47,7 @@ public class Lab01Test {
     public void getPrecoIngressoMeia() {
 
         Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
+        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 200.0, "Djavan", "01/05/2025");
         IngressoMeia ingressoMeia = new IngressoMeia(testEvento);
         System.out.println("Resultado: " + ingressoMeia.getPreco());
         assertEquals(100, ingressoMeia.getPreco());
@@ -56,7 +62,7 @@ public class Lab01Test {
     public void getPrecoIngressoInteira() {
 
         Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 250, "Djavan", "01/05/2025");
+        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 250.0, "Djavan", "01/05/2025");
         IngressoInteira ingressoInteira = new IngressoInteira(testEvento);
         assertEquals(250, ingressoInteira.getPreco());
     }
@@ -70,7 +76,7 @@ public class Lab01Test {
     public void adicionarIngressoMeia() {
 
         Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
+        EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 200.0, "Djavan", "01/05/2025");
         IngressoMeia ingressoMeia = new IngressoMeia(testEvento);
         Usuario usuarioTest = new Usuario("Gabriel", "gabriel@me.com");
         testEvento.adicionarIngresso(ingressoMeia, usuarioTest);
@@ -88,8 +94,8 @@ public class Lab01Test {
     public void adicionaEventoemHistorico() {
 
         Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        EventoShow testEvento1 = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
-        EventoShow testEvento2 = new EventoShow("MPB em Campinas", testLocal, 200, "Anavitória", "02/05/2025");
+        EventoShow testEvento1 = new EventoShow("MPB em Campinas", testLocal, 200.0, "Djavan", "01/05/2025");
+        EventoShow testEvento2 = new EventoShow("MPB em Campinas", testLocal, 200.0, "Anavitória", "02/05/2025");
         HistoricoEventos historicoTeste = new HistoricoEventos();
         historicoTeste.adicionarEvento(testEvento1);
         historicoTeste.adicionarEvento(testEvento2);
@@ -102,15 +108,15 @@ public class Lab01Test {
      * Verifica se os dois eventos do tipo EventoShow foram encontrados
      * pela busca
      */
-    // @Test
-    // public void buscarEventosPorTipo() {
-// 
-        // Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        // EventoShow testEvento1 = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
-        // EventoShow testEvento2 = new EventoShow("MPB em Campinas", testLocal, 200, "Anavitória", "02/05/2025");        
-        // HistoricoEventos historicoTeste = new HistoricoEventos();
-        // historicoTeste.adicionarEvento(testEvento1);
-        // historicoTeste.adicionarEvento(testEvento2);
-        // assertEquals(2, historicoTeste.buscarEventosPorTipo(EventoShow.class).size());
-    // }
+    @Test
+    public void buscarEventosPorTipo() {
+
+        Local testLocal = new Local("Teatro Castro Mendes", 2000);
+        EventoShow testEvento1 = new EventoShow("MPB em Campinas", testLocal, 200.0, "Djavan", "01/05/2025");
+        EventoShow testEvento2 = new EventoShow("MPB em Campinas", testLocal, 200.0, "Anavitória", "02/05/2025");        
+        HistoricoEventos historicoTeste = new HistoricoEventos();
+        historicoTeste.adicionarEvento(testEvento1);
+        historicoTeste.adicionarEvento(testEvento2);
+        assertEquals(2, historicoTeste.buscarEventosPorTipo(EventoShow.class).size());
+    }
 }

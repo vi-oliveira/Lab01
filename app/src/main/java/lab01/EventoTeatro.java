@@ -48,7 +48,7 @@ public class EventoTeatro extends Evento {
         System.out.println("Local: " + super.local.getNome());
         System.out.println("Data: " + this.getData());
         for (int i = 0; i < atores.size(); i++){
-            System.out.println("Ator(a) " + i + ": " + this.atores.get(i));
+            System.out.println("Integrante " + (i + 1) + ": " + this.atores.get(i));
         }
     }
 }

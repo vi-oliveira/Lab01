@@ -10,6 +10,7 @@ package lab01;
  * 
  * @author Gabriel Leite - 216180
  * @author Caio Rhoden - 214129
+ * @author Vinícius de Oliveira - 251527
  */
 public class Usuario {
     private String nome;
@@ -24,6 +25,7 @@ public class Usuario {
     public Usuario(String nome, String email){
         this.nome = nome;
         this.email = email;
+        this.ingresso = null;
     }
 
     /**

@@ -16,8 +16,8 @@ import java.util.UUID;
  * @author Vinícius de Oliveira - 251527
  */
 public abstract class Ingresso {
-    protected Evento evento;
     private UUID codigo;
+    protected Evento evento;
 
     /**
      * Construtor da classe Ingresso
