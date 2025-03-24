@@ -4,7 +4,9 @@
  * Material usado na disciplina MC322 - Programação orientada a objetos.
  */
 
-package lab01;
+package lab01.Eventos;
+
+import lab01.Local;
 
 /**
  * Contém a estrutura de implementação de um EventoEsporte.
@@ -15,10 +17,10 @@ public class EventoEsporte extends Evento {
     private String nome;
     private String esporte;
     private int duracao;
-    private boolean partidaEmAndamento;
     private int pontosTime1;
     private int pontosTime2;
     private Double precoIngresso;
+    private boolean partidaEmAndamento;
     private Local local;
     private String data;
     

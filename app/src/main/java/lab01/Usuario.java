@@ -5,6 +5,8 @@
  */
 package lab01;
 
+import lab01.Ingressos.Ingresso;
+
 /**
  * Contém a estrutura de implementação de um Usuario.
  * 

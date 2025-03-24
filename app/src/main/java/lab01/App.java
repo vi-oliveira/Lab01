@@ -10,17 +10,29 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import lab01.Eventos.Evento;
+import lab01.Eventos.EventoEsporte;
+import lab01.Eventos.EventoPalestra;
+import lab01.Eventos.EventoShow;
+import lab01.Eventos.EventoTeatro;
+import lab01.Eventos.HistoricoEventos;
+import lab01.Ingressos.IngressoFamiliar;
+import lab01.Ingressos.IngressoInteira;
+import lab01.Ingressos.IngressoMeia;
+import lab01.Ingressos.IngressoVIP;
+
 /**
  * Contém a estrutura de implementação da aplicação.
  * 
  * @author Gabriel Leite - 216180
  * @author Caio Rhoden - 214129
+ * @author Vinícius de Oliveira - 251527
  */
 public class App {
 
     /**
      * Aplicação principal
-     * @param args
+     * @param args argumentos para a main
      */
     public static void main(String[] args) {
 
@@ -122,7 +134,7 @@ public class App {
             System.out.println("nome: " + evento.getNome());
         }
 
-        
+
         // DEMONSTRAÇÃO PASSO 5
 
 

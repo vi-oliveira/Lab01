@@ -4,7 +4,9 @@
  * Material usado na disciplina MC322 - Programação orientada a objetos.
  */
 
-package lab01;
+package lab01.Ingressos;
+
+import lab01.Eventos.Evento;
 
 /**
  * Contém a estrutura de implementação de um IngressoFamiliar.

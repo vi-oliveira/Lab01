@@ -4,10 +4,14 @@
  * Material usado na disciplina MC322 - Programação orientada a objetos.
  */
 
-package lab01;
+package lab01.Eventos;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import lab01.Local;
+import lab01.Usuario;
+import lab01.Ingressos.Ingresso;
 
 /**
  * Contém a estrutura de implementação de um Evento.
@@ -17,8 +21,8 @@ import java.util.List;
  * @author Vinícius de Oliveira - 251527
  */
 public abstract class Evento {
-    private String nome;
     protected Local local;
+    private String nome;
     private double precoIngresso;
     private String data;
     private List<Ingresso> ingressosVendidos;

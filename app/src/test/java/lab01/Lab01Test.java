@@ -1,11 +1,19 @@
 /*
  * Modificado:
- * Preço dos ingressos para shows foi alterado de int para Double,
+ * - Preço dos ingressos para shows foi alterado de int para Double,
  * pois utilizar Double permite o uso de centavos.
+ * - Como tentei organizar melhor criando mais pacotes, foi necessário
+ * adicionar as importações.
  */
 
 package lab01;
 import org.junit.jupiter.api.Test;
+
+import lab01.Eventos.EventoShow;
+import lab01.Eventos.HistoricoEventos;
+import lab01.Ingressos.IngressoInteira;
+import lab01.Ingressos.IngressoMeia;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 

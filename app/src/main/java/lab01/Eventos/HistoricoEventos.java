@@ -4,7 +4,7 @@
  * Material usado na disciplina MC322 - Programação orientada a objetos.
  */
 
-package lab01;
+package lab01.Eventos;
 
 import java.util.ArrayList;
 import java.util.List;
