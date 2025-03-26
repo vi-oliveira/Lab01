@@ -14,13 +14,9 @@ import lab01.Local;
  * @author Vinícius de Oliveira - 251527
  */
 public class EventoPalestra extends Evento{
-    private String nome;
     private String nomePalestrante;
     private String tema;
     private int duracao;
-    private Double precoIngresso;
-    private Local local;
-    private String data;
     
     /**
      * Construtor da classe EventoTeatro

@@ -14,7 +14,6 @@ import lab01.Eventos.Evento;
  * @author Vinícius de Oliveira - 251527
  */
 public class IngressoVIP extends Ingresso {
-    private Evento evento;
     
     /**
      * Construtor da classe IngressoInteira

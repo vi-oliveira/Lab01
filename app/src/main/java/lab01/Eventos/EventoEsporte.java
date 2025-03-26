@@ -14,15 +14,11 @@ import lab01.Local;
  * @author Vinícius de Oliveira - 251527
  */
 public class EventoEsporte extends Evento {
-    private String nome;
     private String esporte;
     private int duracao;
     private int pontosTime1;
     private int pontosTime2;
-    private Double precoIngresso;
     private boolean partidaEmAndamento;
-    private Local local;
-    private String data;
     
     /**
      * Construtor da classe EventoEsporte

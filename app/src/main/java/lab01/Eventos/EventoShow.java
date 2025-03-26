@@ -14,11 +14,7 @@ import lab01.Local;
  * @author Vinícius de Oliveira - 251527
  */
 public class EventoShow extends Evento implements FiltroEventos {
-    private String nome;
-    private Local local;
-    private Double precoIngresso;
     private String artista;
-    private String data;
     
     /**
      * Construtor da classe EventoShow
