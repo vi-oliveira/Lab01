@@ -21,19 +21,43 @@ public class EventoPalestra extends Evento{
     /**
      * Construtor da classe EventoTeatro
      * @param nome o nome da peça
+     * @param local o local associado ao Evento
+     * @param precoIngresso o preço do ingresso do Evento
+     * @param data a data do Evento
      * @param nomePalestrante o nome do palestrante
      * @param tema o tema da palestra
      * @param duracao a duração da palestra
-     * @param precoIngresso o preço do ingresso do Evento
-     * @param local o local associado ao Evento
-     * @param data a data do Evento
      */
-    public EventoPalestra(String nome, String nomePalestrante,
-    String tema, int duracao, Double precoIngresso, Local local, String data) {
+    public EventoPalestra(String nome, Local local, Double precoIngresso,
+    String data, String nomePalestrante, String tema, int duracao) {
         super(nome, local, precoIngresso, data);
         this.nomePalestrante = nomePalestrante;
         this.tema = tema;
         this.duracao = duracao;
+    }
+
+    /**
+     * Retorna o nome do palestrante
+     * @return o nome do palestrante
+     */
+    public String getNomePalestrante(){
+        return nomePalestrante;
+    }
+
+    /**
+     * Retorna o tema da palestra
+     * @return o tema da palestra
+     */
+    public String getTema(){
+        return tema;
+    }
+
+    /**
+     * Retorna a duração da palestra em minutos
+     * @return a duração da palestra em minutos
+     */
+    public int getDuracao(){
+        return duracao;
     }
 
     /**

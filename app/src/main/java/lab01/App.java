@@ -49,7 +49,8 @@ public class App {
 
         // DEMONSTRAÇÃO PASSO 1
         Local neoQuimica = new Local("Neo Química Arena", 4000);
-        EventoShow show = new EventoShow("Esquinas", neoQuimica, 200.0, "Anavitoria", "22/09/2025");
+        EventoShow show = new EventoShow("Esquinas", neoQuimica,
+        200.0, "22/09/2025", "Anavitoria", "MPB");
         IngressoInteira ingreInteiraShow = new IngressoInteira(show);
         IngressoMeia ingreMeiaShow = new IngressoMeia(show);
         IngressoVIP ingreVIPShow = new IngressoVIP(show);
@@ -76,12 +77,12 @@ public class App {
 
         Local unicamp = new Local("Teatro de Arena", 100);
         EventoEsporte evenEsporte = new EventoEsporte("Final da Copa do Mundo",
-        "futebol", 110, 800.0, neoQuimica, "01/04/2025");
+        neoQuimica, 800.0, "01/04/2025", "futebol", 110);
         EventoPalestra evenPalestra = new EventoPalestra("O avanço da computação computacional",
-        "João", "Tecnologia", 60, 40.0, unicamp, "12/11/2025");
+        unicamp, 40.0, "12/11/2025", "João", "Tecnologia", 60);
         List<String> atoresHam = new ArrayList<String>(Arrays.asList("Ana", "Beto", "Carlos"));
-        EventoTeatro evenTeatro = new EventoTeatro("Hamlet",
-        atoresHam, 240, 120.0, unicamp, "21/06/2025");
+        EventoTeatro evenTeatro = new EventoTeatro("Hamlet", unicamp,
+        120.0, "21/06/2025", atoresHam, 240);
         
         System.out.println("\nTeatro:");
         evenTeatro.exibirDetalhes();
@@ -115,7 +116,8 @@ public class App {
 
         // DEMONSTRAÇÃO PASSO 4
         System.out.println("\nDEMONSTRAÇÃO DO HISTÓRICO:");
-        EventoShow evenShow2 = new EventoShow("Internacional", local, 800, "Linkin Park", "14/02/2026");
+        EventoShow evenShow2 = new EventoShow("Internacional", local,
+        800, "14/02/2026", "Linkin Park", "Rock");
         HistoricoEventos historico = new HistoricoEventos();
         historico.adicionarEvento(show);
         historico.adicionarEvento(evenShow2);

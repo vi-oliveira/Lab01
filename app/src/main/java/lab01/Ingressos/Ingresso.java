@@ -30,9 +30,21 @@ public abstract class Ingresso {
         this.codigo = UUID.randomUUID();
     }
 
-    // public void testUUID(){
-        // System.out.println(this.codigo);
-    // }
+    /**
+     * Retorna o código do evento
+     * @return o código do evento
+     */
+    public UUID getCodigo(){
+        return codigo;
+    }
+
+    /**
+     * Retorna o evento associado ao ingresso
+     * @return o evento associado ao ingresso
+     */
+    public Evento getEvento(){
+        return evento;
+    }
 
     /**
      * Retorna o preço do Ingresso

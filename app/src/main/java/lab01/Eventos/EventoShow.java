@@ -15,18 +15,22 @@ import lab01.Local;
  */
 public class EventoShow extends Evento implements FiltroEventos {
     private String artista;
+    private String generoMusical;
     
     /**
      * Construtor da classe EventoShow
      * @param nome o nome do Evento
      * @param local o local associado ao Evento
      * @param precoIngresso o preço do ingresso do Evento
-     * @param artista o nome do artista
      * @param data a data do Evento
+     * @param artista o nome do artista
+     * @param generoMusical o generoMusical do show
      */
-    public EventoShow(String nome, Local local, double precoIngresso, String artista, String data){
+    public EventoShow(String nome, Local local, double precoIngresso,
+    String data, String artista, String generoMusical){
         super(nome, local, precoIngresso, data);
-        this.artista = artista; 
+        this.artista = artista;
+        this.generoMusical = generoMusical;
     }
 
     /**
@@ -38,19 +42,27 @@ public class EventoShow extends Evento implements FiltroEventos {
     }
 
     /**
-     * Altera o nome do artista para `nome` 
+     * Altera o nome do artista para `nomeArtista` 
      * @param nomeArtista o novo nome do artista
      */
     public void setArtista(String nomeArtista){
         this.artista = nomeArtista;
     }
+    
+    /**
+     * Retorna o gênero musical do show
+     * @return o gênero musical do show
+     */
+    public String getGeneroMusical(){
+        return generoMusical;
+    }
 
     /**
-     * Retorna a capacidade do local do evento
-     * @return a capacidade do local do evento
+     * Altera do gênero musical para do artista para `generoMusical` 
+     * @param generoMusical o novo gênero musical
      */
-    public Double getCapacidade(){
-        return super.local.getCapacidade();
+    public void setGeneroMusical(String generoMusical){
+        this.generoMusical = generoMusical;
     }
 
     /**

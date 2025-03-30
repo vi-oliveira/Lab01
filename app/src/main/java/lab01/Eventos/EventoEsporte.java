@@ -23,20 +23,60 @@ public class EventoEsporte extends Evento {
     /**
      * Construtor da classe EventoEsporte
      * @param nome o nome do Evento
+     * @param local o local associado ao Evento
+     * @param precoIngresso o preço do ingresso do Evento
+     * @param data a data do Evento
      * @param esporte o esporte relacionado ao Evento
      * @param duracao a duração da partida do Evento
-     * @param precoIngresso o preço do ingresso do Evento
-     * @param local o local associado ao Evento
-     * @param data a data do Evento
      */
-    public EventoEsporte(String nome, String esporte, int duracao,
-    Double precoIngresso, Local local, String data){
+    public EventoEsporte(String nome, Local local, Double precoIngresso,
+    String data, String esporte, int duracao){
         super(nome, local, precoIngresso, data);
         this.esporte = esporte;
         this.duracao = duracao;
         this.partidaEmAndamento = false;
         this.pontosTime1 = 0;
         this.pontosTime2 = 0;
+    }
+
+    /**
+     * Retorna esporte da partida
+     * @return esporte da partida
+     */
+    public String getEsporte(){
+        return esporte;
+    }
+
+    /**
+     * Retorna a duração da palestra em minutos
+     * @return a duração da palestra em minutos
+     */
+    public int getDuracao(){
+        return duracao;
+    }
+
+    /**
+     * Retorna os pontos do time 1
+     * @return os pontos do time 1
+     */
+    public int getPontosTime1(){
+        return pontosTime1;
+    }
+
+    /**
+     * Retorna os pontos do time 2
+     * @return os pontos do time 2
+     */
+    public int getPontosTime2(){
+        return pontosTime2;
+    }
+
+    /**
+     * Retorna o estado da partida (se está em andamento)
+     * @return o estado da partida
+     */
+    public boolean getPartidaEmAndamento(){
+        return partidaEmAndamento;
     }
 
     /**

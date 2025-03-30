@@ -31,6 +31,14 @@ public class Usuario {
     }
 
     /**
+     * Altera o nome do usuário para `nome` 
+     * @param nome o novo nome do usuário
+     */
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    
+    /**
      * Retorna o nome do usuário
      * @return o nome do usupario
      */
@@ -38,6 +46,22 @@ public class Usuario {
         return nome;
     }
     
+    /**
+     * Altera o email para 'email'
+     * @param email o novo email
+     */
+    public void setEmail(String email){
+        this.email = email;
+    }
+
+    /**
+     * Retorna o email do usuário
+     * @return o email do usuário
+     */
+    public String getEmail(){
+        return email;
+    }
+
     /**
      * Altera o ingresso do usuário para `ingresso` 
      * @param ingresso o novo ingresso
@@ -52,13 +76,5 @@ public class Usuario {
      */
     public Ingresso getIngresso(){
         return ingresso;
-    }
-
-    /**
-     * Altera o nome do usuário para `nome` 
-     * @param nome o novo nome do usuário
-     */
-    public void setNome(String nome){
-        this.nome = nome;
     }
 }

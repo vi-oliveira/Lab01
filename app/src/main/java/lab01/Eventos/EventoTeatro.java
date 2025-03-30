@@ -22,17 +22,33 @@ public class EventoTeatro extends Evento {
     /**
      * Construtor da classe EventoTeatro
      * @param nome o nome da peça
+     * @param local o local associado ao Evento
+     * @param precoIngresso o preço do ingresso do Evento
+     * @param data a data do Evento
      * @param atores List com o nome dos atores
      * @param duracao a duração do teatro
-     * @param precoIngresso o preço do ingresso do Evento
-     * @param local o local associado ao Evento
-     * @param data a data do Evento
      */
-    public EventoTeatro(String nome, List<String> atores,
-    int duracao, Double precoIngresso, Local local, String data) {
+    public EventoTeatro(String nome, Local local, Double precoIngresso,
+    String data, List<String> atores, int duracao) {
         super(nome, local, precoIngresso, data);
         this.atores = atores;
         this.duracao = duracao;
+    }
+
+    /**
+     * Retorna a duração da palestra em minutos
+     * @return a duração da palestra em minutos
+     */
+    public List<String> getAtores(){
+        return atores;
+    }
+
+    /**
+     * Retorna a duração da peça em minutos
+     * @return a duração da peça em minutos
+     */
+    public int getDuracao(){
+        return duracao;
     }
 
     /**

@@ -59,6 +59,46 @@ public abstract class Evento {
     }
     
     /**
+     * Retorna o local do Evento
+     * @return o local do Evento
+     */
+    public Local getLocal(){
+        return local;
+    }
+
+    /**
+     * Altera o local do Evento para `local` 
+     * @param local o novo local do Evento
+     */
+    public void setLocal(Local local){
+        this.local = local;
+    }
+    
+    /**
+     * Retorna a capacidade do local do evento
+     * @return a capacidade do local do evento
+     */
+    public Double getCapacidade(){
+        return local.getCapacidade();
+    }
+
+    /**
+     * Retorna o preço do ingresso do Evento
+     * @return o precoIngresso do Evento
+     */
+    public double getPrecoIngresso(){
+        return precoIngresso;
+    }
+
+    /**
+     * Altera o precoIngresso do Evento para `precoIngresso` 
+     * @param precoIngresso o novo precoIngresso do Evento
+     */
+    public void setPrecoIngresso(double precoIngresso){
+        this.precoIngresso = precoIngresso;
+    }
+
+    /**
      * Retorna a lista de ingressos vendidos
      * @return a lista de ingressos vendidos
      */
@@ -88,22 +128,6 @@ public abstract class Evento {
      */
     public void setData(String data){
         this.data = data;
-    }
-    
-    /**
-     * Retorna o preço do ingresso do Evento
-     * @return o precoIngresso do Evento
-     */
-    public double getPrecoIngresso(){
-        return precoIngresso;
-    }
-
-    /**
-     * Altera o precoIngresso do Evento para `precoIngresso` 
-     * @param precoIngresso o novo precoIngresso do Evento
-     */
-    public void setPrecoIngresso(double precoIngresso){
-        this.precoIngresso = precoIngresso;
     }
 
     /**
