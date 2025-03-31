@@ -31,6 +31,12 @@ import lab01.Ingressos.IngressoVIP;
 public class App {
 
     /**
+     * Construtor padrão da classe App.
+     * Construtor vazio, pois a classe é utilizada apenas para a main.
+     */
+    public App(){}
+
+    /**
      * Aplicação principal
      * @param args argumentos para a main
      */

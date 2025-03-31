@@ -70,7 +70,7 @@ public class EventoFestival extends Evento implements FiltroEventos {
     /**
      * Imprime os dados relacionados ao evento
      */
-    public void exibirDetalhes () {
+    public void exibirDetalhes(){
         System.out.println("Nome do festival: " + this.getNome());
         System.out.println("Tema do festival: " + this.tema);
         System.out.println("Preço do ingresso:  R$"

@@ -29,7 +29,7 @@ public class IngressoFamiliar extends Ingresso {
      * @return o preço do IngressoFamiliar
      */
     @Override
-    public double getPreco() {
+    public double getPreco(){
         return super.evento.getPrecoIngresso() * 0.75;
     }
 }

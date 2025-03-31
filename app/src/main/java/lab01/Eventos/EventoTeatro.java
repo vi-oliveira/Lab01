@@ -29,7 +29,7 @@ public class EventoTeatro extends Evento implements FiltroEventos {
      * @param duracao a duração do teatro
      */
     public EventoTeatro(String nome, Local local, Double precoIngresso,
-    String data, List<String> atores, int duracao) {
+    String data, List<String> atores, int duracao){
         super(nome, local, precoIngresso, data);
         this.atores = atores;
         this.duracao = duracao;
@@ -62,7 +62,7 @@ public class EventoTeatro extends Evento implements FiltroEventos {
     /**
      * Imprime os dados relacionados ao evento
      */
-    public void exibirDetalhes() {
+    public void exibirDetalhes(){
         System.out.println("Nome do evento: " + this.getNome());
         System.out.println("Duração: " + this.duracao + " minutos");
         System.out.println("Preço do ingresso: R$"

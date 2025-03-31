@@ -19,7 +19,7 @@ public class IngressoMeia extends Ingresso {
      * Construtor da classe IngressoMeia
      * @param evento o evento associado ao Ingresso
      */
-    public IngressoMeia(Evento evento) {
+    public IngressoMeia(Evento evento){
         super(evento);
     }
 
@@ -28,7 +28,7 @@ public class IngressoMeia extends Ingresso {
      * @return o preço do IngressoMeia
      */
     @Override
-    public double getPreco() {
+    public double getPreco(){
         return super.evento.getPrecoIngresso() / 2;
     }
 }

@@ -21,6 +21,9 @@ import lab01.Ingressos.Ingresso;
  * @author Vinícius de Oliveira - 251527
  */
 public abstract class Evento {
+    /**
+     * O local associado a este evento.
+     */
     protected Local local;
     private String nome;
     private double precoIngresso;

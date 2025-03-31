@@ -122,10 +122,10 @@ public class HistoricoEventos {
      * @param filtro Objeto da classe com o critério de filtragem de eventos.
      * @return Lista de eventos que atendem ao critério.
      */
-    public List<Evento> buscarEventos(FiltroEventos filtro) {
+    public List<Evento> buscarEventos(FiltroEventos filtro){
         List<Evento> eventosFiltrados = new ArrayList<Evento>() ;
-        for (Evento evento : this.eventos) {
-            if (filtro.filtrar(evento)) {
+        for (Evento evento : this.eventos){
+            if (filtro.filtrar(evento)){
                 eventosFiltrados.add(evento);
             }
         }

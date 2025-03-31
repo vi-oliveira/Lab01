@@ -18,8 +18,11 @@ import lab01.Eventos.Evento;
  * @author Vinícius de Oliveira - 251527
  */
 public abstract class Ingresso {
-    private UUID codigo;
+    /**
+     * O evento associado a este ingresso.
+     */
     protected Evento evento;
+    private UUID codigo;
 
     /**
      * Construtor da classe Ingresso

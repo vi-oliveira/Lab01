@@ -28,7 +28,7 @@ public class IngressoInteira extends Ingresso {
      * @return o preço do IngressoInteira
      */
     @Override
-    public double getPreco() {
+    public double getPreco(){
         return super.evento.getPrecoIngresso();
     }
 }

@@ -29,7 +29,7 @@ public class EventoPalestra extends Evento implements FiltroEventos {
      * @param duracao a duração da palestra
      */
     public EventoPalestra(String nome, Local local, Double precoIngresso,
-    String data, String nomePalestrante, String tema, int duracao) {
+    String data, String nomePalestrante, String tema, int duracao){
         super(nome, local, precoIngresso, data);
         this.nomePalestrante = nomePalestrante;
         this.tema = tema;
@@ -79,7 +79,7 @@ public class EventoPalestra extends Evento implements FiltroEventos {
     /**
      * Imprime os dados relacionados à palestra
      */
-    public void exibirDetalhes () {
+    public void exibirDetalhes(){
         System.out.println("Nome: " + this.getNome());
         System.out.println("Nome do palestrante: " + this.nomePalestrante);
         System.out.println("Tema da palestra: " + this.tema);
