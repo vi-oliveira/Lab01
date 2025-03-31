@@ -15,7 +15,7 @@ import lab01.Local;
  * 
  * @author Vinícius de Oliveira - 251527
  */
-public class EventoTeatro extends Evento {
+public class EventoTeatro extends Evento implements FiltroEventos {
     private List<String> atores;
     private int duracao;
     
@@ -44,6 +44,14 @@ public class EventoTeatro extends Evento {
     }
 
     /**
+     * Altera a lista de atores para 'atores'
+     * @param atores a nova lista de atores
+     */
+    public void setAtores(List<String> atores){
+        this.atores = atores;
+    }
+
+    /**
      * Retorna a duração da peça em minutos
      * @return a duração da peça em minutos
      */
@@ -63,6 +71,21 @@ public class EventoTeatro extends Evento {
         System.out.println("Data: " + this.getData());
         for (int i = 0; i < atores.size(); i++){
             System.out.println("Integrante " + (i + 1) + ": " + this.atores.get(i));
+        }
+    }
+
+    /**
+     * Busca peças de teatro com pelo menos 1 hora de duração
+     * @param evento o evento que será verificado
+     * @return True ou False para o caso do evento atender ou não aos requisitos
+     */
+    @Override
+    public boolean filtrar(Evento evento){
+        if (evento instanceof EventoTeatro){
+            EventoTeatro outroTeatro = (EventoTeatro) evento;
+            return (outroTeatro.getDuracao() >= 60);
+        } else {
+            return false ;
         }
     }
 }

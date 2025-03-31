@@ -13,7 +13,7 @@ import lab01.Local;
  * 
  * @author Vinícius de Oliveira - 251527
  */
-public class EventoPalestra extends Evento{
+public class EventoPalestra extends Evento implements FiltroEventos {
     private String nomePalestrante;
     private String tema;
     private int duracao;
@@ -45,11 +45,27 @@ public class EventoPalestra extends Evento{
     }
 
     /**
+     * Altera o nome do palestrante para 'nomePalestrante'
+     * @param nomePalestrante o novo nome do palestrante
+     */
+    public void setNome(String nomePalestrante){
+        this.nomePalestrante = nomePalestrante;
+    }
+
+    /**
      * Retorna o tema da palestra
      * @return o tema da palestra
      */
     public String getTema(){
         return tema;
+    }
+
+    /**
+     * Altera o tema da palestra para 'tema' 
+     * @param tema o novo tema da palestra
+     */
+    public void setTema(String tema){
+        this.tema = tema;
     }
 
     /**
@@ -72,5 +88,20 @@ public class EventoPalestra extends Evento{
         + String.format("%.2f", this.getPrecoIngresso()));
         System.out.println("Local: " + super.local.getNome());
         System.out.println("Data: " + this.getData());
+    }
+
+    /**
+     * Busca palestras de tema 'saúde'
+     * @param evento o evento que será verificado
+     * @return True ou False para o caso do evento atender ou não aos requisitos
+     */
+    @Override
+    public boolean filtrar(Evento evento){
+        if (evento instanceof EventoPalestra){
+            EventoPalestra outroPalestra = (EventoPalestra) evento;
+            return (outroPalestra.getTema() == "saúde");
+        } else {
+            return false ;
+        }
     }
 }

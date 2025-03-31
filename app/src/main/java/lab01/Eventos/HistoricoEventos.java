@@ -115,8 +115,11 @@ public class HistoricoEventos {
 
     /**
      * Busca eventos que atendem a um critério específico.
-     *
-     * @param filtro O critério de filtragem dos eventos.
+     * O método 'buscarEventos' recebe um objeto que cuja classe implementa
+     * a interface 'FiltroEventos'. Serão filtrados os eventos que tiverem a mesma classe
+     * que o objeto 'filtro' e atenderem aos critérios do método 'filtro' de sua classe.
+     * 
+     * @param filtro Objeto da classe com o critério de filtragem de eventos.
      * @return Lista de eventos que atendem ao critério.
      */
     public List<Evento> buscarEventos(FiltroEventos filtro) {

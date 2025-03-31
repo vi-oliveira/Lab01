@@ -13,7 +13,7 @@ import lab01.Local;
  * 
  * @author Vinícius de Oliveira - 251527
  */
-public class EventoEsporte extends Evento {
+public class EventoEsporte extends Evento implements FiltroEventos {
     private String esporte;
     private int duracao;
     private int pontosTime1;
@@ -53,6 +53,14 @@ public class EventoEsporte extends Evento {
      */
     public int getDuracao(){
         return duracao;
+    }
+
+    /**
+     * Altera a duração da partida para `duracao` 
+     * @param duracao a nova duração da partida
+     */
+    public void setDuracao(int duracao){
+        this.duracao = duracao;
     }
 
     /**
@@ -126,6 +134,26 @@ public class EventoEsporte extends Evento {
     }
 
     /**
+     * Anula um ponto de um dos dois times.
+     * @param time o número do time que marcou um ponto
+     */
+    public void anularPonto(int time){
+        switch (time) {
+            case 1:
+                this.pontosTime1 -= 1;
+                break;
+            
+            case 2:
+                this.pontosTime2 -= 1;
+                break;
+
+            default:
+                System.out.println("Time inválido!");
+                break;
+        }
+    }
+
+    /**
      * Imprime o placar da partida
      */
     public void exibirPlacar(){
@@ -146,6 +174,21 @@ public class EventoEsporte extends Evento {
             System.out.println("Vitória do time 2");
         } else {
             System.out.println("Empate");
+        }
+    }
+
+    /**
+     * Busca eventos onde o esporte é 'futebol'
+     * @param evento o evento que será verificado
+     * @return True ou False para o caso do evento atender ou não aos requisitos
+     */
+    @Override
+    public boolean filtrar(Evento evento){
+        if (evento instanceof EventoEsporte){
+            EventoEsporte outroEsporte = (EventoEsporte) evento;
+            return (outroEsporte.getEsporte() == "futebol");
+        } else {
+            return false ;
         }
     }
 }

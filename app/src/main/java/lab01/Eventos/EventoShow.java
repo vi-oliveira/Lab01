@@ -68,7 +68,7 @@ public class EventoShow extends Evento implements FiltroEventos {
     /**
      * Imprime os dados relacionados ao evento
      */
-    public void exibirDetalhes () {
+    public void exibirDetalhes(){
         System.out.println("Nome do show: " + this.getNome());
         System.out.println("Local: " + super.local.getNome());
         System.out.println("Artista: " + this.artista);
@@ -76,12 +76,17 @@ public class EventoShow extends Evento implements FiltroEventos {
         + String.format("%.2f", this.getPrecoIngresso()));
         System.out.println("Data do show: " + this.getData());
     }
-
+    
+    /**
+     * Busca eventos que sejam do gênero 'Rock'
+     * @param evento o evento que será verificado
+     * @return True ou False para o caso do evento atender ou não aos requisitos
+     */
     @Override
-    public boolean filtrar(Evento evento) {
-        if (evento instanceof EventoShow) {
+    public boolean filtrar(Evento evento){
+        if (evento instanceof EventoShow){
             EventoShow outroShow = (EventoShow) evento;
-            return (outroShow.getCapacidade() >= 200);
+            return (outroShow.getGeneroMusical() == "Rock");
         } else {
             return false ;
         }

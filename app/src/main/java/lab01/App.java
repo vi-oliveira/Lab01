@@ -126,11 +126,14 @@ public class App {
         historico.adicionarEvento(evenEsporte);
         
         // Mostarndo busca por tipo
+        System.out.println(" - Bucando por tipo:");
         List<Evento> eventosFiltrados = historico.buscarEventosPorTipo(EventoShow.class);
         for (Evento evento : eventosFiltrados) {
             System.out.println("nome: " + evento.getNome());
         }
         
+        // Mostarndo busca por data
+        System.out.println(" - Bucando por data (12/11/2025):");
         eventosFiltrados = historico.buscarEventosPorData("12/11/2025");
         for (Evento evento : eventosFiltrados) {
             System.out.println("nome: " + evento.getNome());
@@ -138,22 +141,21 @@ public class App {
 
 
         // DEMONSTRAÇÃO PASSO 5
+        System.out.println("\nDEMONSTRAÇÃO DA INTERFACE FILTRO:");
+        EventoShow evenShow3 = new EventoShow("Guitarras", unicamp,
+        20, "21/03/2025", "Rockeiros da Unicamp", "Rock");
+        historico.adicionarEvento(evenShow3);
+        
+        // Encontra os eventos do tipo show que passam no filtro:
+        List<Evento> eventosInterfaceShow = historico.buscarEventos(evenShow2);
+        // Encontra os eventos do tipo Esporte que passam no filtro:
+        List<Evento> eventosInterfaceEspor = historico.buscarEventos(evenEsporte);
 
-
-
-        //  TEESTE
-        // Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        // EventoShow testEvento = new EventoShow("MPB em Campinas", testLocal, 250, "Djavan", "01/05/2025");
-        // IngressoInteira ingressoInteira = new IngressoInteira(testEvento);
-        // System.out.println("teste preço: " + ingressoInteira.getPreco());
-
-
-        // Local testLocal = new Local("Teatro Castro Mendes", 2000);
-        // EventoShow testEvento1 = new EventoShow("MPB em Campinas", testLocal, 200, "Djavan", "01/05/2025");
-        // EventoShow testEvento2 = new EventoShow("MPB em Campinas", testLocal, 200, "Anavitória", "02/05/2025");
-        // HistoricoEventos historicoTeste = new HistoricoEventos();
-        // historicoTeste.adicionarEvento(testEvento1);
-        // historicoTeste.adicionarEvento(testEvento2);
-        // System.out.println("2: " + historicoTeste.getEventos().size());
+        for (Evento evento : eventosInterfaceShow){
+            System.out.println(evento.getNome());
+        }
+        for (Evento evento : eventosInterfaceEspor){
+            System.out.println(evento.getNome());
+        }
     }
 }

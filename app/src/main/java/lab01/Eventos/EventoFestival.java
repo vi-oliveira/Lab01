@@ -15,7 +15,7 @@ import lab01.Local;
  * 
  * @author Vinícius de Oliveira - 251527
  */
-public class EventoFestival extends Evento {
+public class EventoFestival extends Evento implements FiltroEventos {
     private String tema;
     private List<String> patrocinadores;
     
@@ -44,11 +44,27 @@ public class EventoFestival extends Evento {
     }
 
     /**
+     * Altera o tema do festival para `tema` 
+     * @param tema o novo tema do festival
+     */
+    public void setTema(String tema){
+        this.tema = tema;
+    }
+
+    /**
      * Retorna os patrocinadores festival
      * @return os patrocinadores festival
      */
     public List<String> getPatrocinadores(){
         return patrocinadores;
+    }
+
+    /**
+     * Altera a lista de patrocinadores para 'patrocinadores'
+     * @param patrocinadores a nova lista de patrocinadores
+     */
+    public void setPatrocinadores(List<String> patrocinadores){
+        this.patrocinadores = patrocinadores;
     }
 
     /**
@@ -63,6 +79,21 @@ public class EventoFestival extends Evento {
         System.out.println("Data: " + this.getData());
         for (int i = 0; i < patrocinadores.size(); i++){
             System.out.println("Patrocinador " + (i + 1) + ": " + this.patrocinadores.get(i));
+        }
+    }
+
+    /**
+     * Busca festivais de tema 'alimentos'
+     * @param evento o evento que será verificado
+     * @return True ou False para o caso do evento atender ou não aos requisitos
+     */
+    @Override
+    public boolean filtrar(Evento evento){
+        if (evento instanceof EventoFestival){
+            EventoFestival outroFestival = (EventoFestival) evento;
+            return (outroFestival.getTema() == "alimentos");
+        } else {
+            return false ;
         }
     }
 }
