@@ -40,7 +40,7 @@ public class App {
      * Aplicação principal
      * @param args argumentos para a main
      */
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
 
         // DEMONSTRAÇÃO CÓDIGO PRELIMINAR

@@ -2,6 +2,9 @@
  * HistoricoEventos.java
  * 
  * Material usado na disciplina MC322 - Programação orientada a objetos.
+ * 
+ * A documentação para javadoc deste arquivo foram feitas com o uso do
+ * ChatGPT e posteriormente revisadas e/ou corrigidas.
  */
 
 package lab01.Eventos;
